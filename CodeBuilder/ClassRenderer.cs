@@ -34,15 +34,17 @@ namespace CodeBuilder {
             _indentToken = indentToken;
         }
 
-        public ClassRenderer AddDirective(string directive)
-        {
-            _directiveRefs.Add("using " + directive + ";");
+        public ClassRenderer AddDirective(string directive) {
+            var d = String.Format("using {0};", directive);
+            if (!_directiveRefs.Contains(d))
+                _directiveRefs.Add("using " + directive + ";");
             return this;
         }
 
         public ClassRenderer AddInterface(string inter)
         {
-            _interfaceRefs.Add(inter);
+            if (!_interfaceRefs.Contains(inter))
+                _interfaceRefs.Add(inter);
             return this;
         }
 

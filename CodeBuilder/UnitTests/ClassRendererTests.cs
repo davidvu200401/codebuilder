@@ -36,6 +36,11 @@ namespace CodeBuilder.UnitTests {
             Assert.AreEqual(_basic, x);
             Assert.AreEqual(5, locs.Count);
             Assert.AreEqual("using System;", locs[0]);
+            // add another of the same directive
+            _basic.AddDirective("System");
+            locs = _basic.EmitLines();
+            Assert.AreEqual(5, locs.Count, "Count has not increased...");
+            Assert.AreEqual("using System;", locs[0], "Only one directive is present");
         }
 
         [Test]
