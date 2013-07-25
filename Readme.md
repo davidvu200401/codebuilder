@@ -3,7 +3,7 @@
 A simple Class for building up C# code using functions...
 
 ## License
-MIT
+MIT, Do No Evil...
 
 ## Usage
 
