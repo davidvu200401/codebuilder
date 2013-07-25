@@ -78,7 +78,6 @@ namespace CodeBuilder.UnitTests {
             Assert.IsInstanceOf(typeof(MethodRenderer), y);
             Assert.AreEqual(8, locs.Count);
             Assert.AreEqual("\t\tpublic TestClass() {", locs[2]);
-            Console.WriteLine(_basic.Emit());
             Assert.AreEqual("\t\tpublic TestClass(int x, int y) {", locs[4]);
         }
 
