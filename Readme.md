@@ -49,6 +49,7 @@ This should produce a program that looks like this:
 
     namespace HelloWorldNamespace {
         class HelloWorldProgram : ISomeInterface {
+            private String _greetings;
             public HelloWorldProgram() {
                 _greetings = "Hello";
             }
