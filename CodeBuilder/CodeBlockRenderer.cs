@@ -29,6 +29,13 @@ namespace CodeBuilder {
             return this;
         }
 
+        public CodeBlockRenderer addBlock(string baseLoc) {
+            if (!_isBlock) return this;
+            var nCBlock = new CodeBlockRenderer(baseLoc, true, _indentToken);
+            _codeBlock.Add(nCBlock);
+            return nCBlock;
+        }
+
         public override List<string> EmitLines(string indent = "")
         {
             var ret = new List<string>();
